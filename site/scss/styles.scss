@@ -2,6 +2,7 @@ $font-family: 'Raleway';
 $sans-serif-font:'Helvetica Neue';
 $font-color: black;
 $background-color: #0080FF;
+$text-align: center;
 
 /* main headers */
 
@@ -120,7 +121,23 @@ ul {
     margin: 0 auto;
 }
 
+.container {
+    width: 100%;
+    margin: 0;
+    @media screen and (min-width: 640px) {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+    } 
+}
+
 img {
     display: block;
     margin: auto;
+    width: 75%;
+    @media screen and (min-width: 640px) {
+        width: 50%;
+        min-width: 600px;
+        margin: 0 auto;
+    }
 }
