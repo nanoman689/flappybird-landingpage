@@ -31,7 +31,7 @@ gulp.task('html', function() {
 
 // JavaScript build task, removes whitespace and concatenates all files
 gulp.task('scripts', function() {
-  return gulp.src('site/js/*.js')
+  return gulp.src(['site/js/*.js', '!site/js/*.min.js'])
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./build/js'));
