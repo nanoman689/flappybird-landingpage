@@ -1,1 +1,1 @@
-$h1.velocity({translateX:"200px"});
+$h1.velocity("fadeIn",{duration:1500});
