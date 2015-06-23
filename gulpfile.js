@@ -31,10 +31,10 @@ gulp.task('html', function() {
 
 // JavaScript build task, removes whitespace and concatenates all files
 gulp.task('scripts', function() {
-  return gulp.src(['site/js/*.js', '!site/js/*.min.js'])
+  return gulp.src('site/js/*.js')
     .pipe(concat('app.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'));
+    .pipe(gulp.dest('build/js'));
 });
 
 // Styles build task, concatenates all the files
@@ -61,4 +61,4 @@ gulp.task('watch', function() {
 gulp.task('default', ['jshint', 'sass', 'watch']);
 
 // Build task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['sass', 'html', 'scripts', 'styles', 'images']);
